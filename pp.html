@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building Environment Log</title>
+
+<style>
+body{
+    background:#0b0f14;
+    color:#00ff99;
+    font-family:Consolas, monospace;
+    padding:30px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+input{
+    background:#111;
+    color:#00ff99;
+    border:1px solid #00ff99;
+    padding:10px;
+    width:250px;
+}
+
+button{
+    background:#00ff99;
+    color:#000;
+    border:none;
+    padding:10px 15px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th, td{
+    border:1px solid #00ff99;
+    padding:8px;
+    text-align:left;
+}
+
+.alert{
+    color:#ff5555;
+    font-weight:bold;
+}
+
+.notice{
+    color:#ffd966;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>BUILDING ENVIRONMENT DATABASE</h1>
+
+<p>Enter Access Code:</p>
+
+<input type="text" id="code">
+<button onclick="openFile()">ACCESS FILE</button>
+
+<hr>
+
+<div id="result">
+Awaiting access code...
+</div>
+
+</div>
+
+<script>
+
+function openFile(){
+
+let code = document.getElementById("code").value.toUpperCase();
+
+if(code === "A9174E3208"){
+
+document.getElementById("result").innerHTML = `
+
+<h2>FILE: TEMPERATURE LOG ARCHIVE</h2>
+
+<p>
+Location: Executive Office 4B<br>
+Period: 01 June 2026 - 06 June 2026
+</p>
+
+<p class="notice">
+System Status: Records Retrieved Successfully
+</p>
+
+<table>
+
+<tr>
+<th>Date</th>
+<th>Time</th>
+<th>Event</th>
+</tr>
+
+<tr><td>01 Jun</td><td>06:00</td><td>Room Temperature ON</td></tr>
+<tr><td>01 Jun</td><td>06:00</td><td>24°C (Automatic)</td></tr>
+<tr><td>01 Jun</td><td>11:00</td><td>22°C (Automatic)</td></tr>
+<tr><td>01 Jun</td><td>15:00</td><td>25°C (Automatic)</td></tr>
+<tr><td>01 Jun</td><td>18:00</td><td>27°C (Automatic)</td></tr>
+<tr><td>02 Jun</td><td>00:00</td><td>Room Temperature OFF</td></tr>
+
+<tr><td>02 Jun</td><td>06:00</td><td>Room Temperature ON</td></tr>
+<tr><td>02 Jun</td><td>06:00</td><td>24°C (Automatic)</td></tr>
+<tr><td>02 Jun</td><td>11:00</td><td>22°C (Automatic)</td></tr>
+<tr><td>02 Jun</td><td>15:00</td><td>25°C (Automatic)</td></tr>
+<tr><td>02 Jun</td><td>18:00</td><td>27°C (Automatic)</td></tr>
+<tr><td>03 Jun</td><td>00:00</td><td>Room Temperature OFF</td></tr>
+
+<tr><td>03 Jun</td><td>06:00</td><td>Room Temperature ON</td></tr>
+<tr><td>03 Jun</td><td>06:00</td><td>24°C (Automatic)</td></tr>
+<tr><td>03 Jun</td><td>11:00</td><td>22°C (Automatic)</td></tr>
+<tr><td>03 Jun</td><td>15:00</td><td>25°C (Automatic)</td></tr>
+<tr><td>03 Jun</td><td>18:00</td><td>27°C (Automatic)</td></tr>
+
+<tr class="alert">
+<td>03 Jun</td>
+<td>23:15</td>
+<td>20°C (MANUALLY MODIFIED)</td>
+</tr>
+
+<tr class="alert">
+<td>03 Jun</td>
+<td>23:30</td>
+<td>18°C (SET TO AUTOMATIC)</td>
+</tr>
+
+<tr><td>04 Jun</td><td>00:00</td><td>Room Temperature OFF</td></tr>
+
+<tr><td>04 Jun</td><td>06:00</td><td>Room Temperature ON</td></tr>
+<tr><td>04 Jun</td><td>06:00</td><td>18°C (Automatic)</td></tr>
+<tr><td>04 Jun</td><td>11:00</td><td>16°C (Automatic)</td></tr>
+<tr><td>04 Jun</td><td>15:00</td><td>16°C (Automatic)</td></tr>
+<tr><td>04 Jun</td><td>18:00</td><td>18°C (Automatic)</td></tr>
+<tr><td>05 Jun</td><td>00:00</td><td>Room Temperature OFF</td></tr>
+
+<tr><td>05 Jun</td><td>06:00</td><td>Room Temperature ON</td></tr>
+<tr><td>05 Jun</td><td>06:00</td><td>18°C (Automatic)</td></tr>
+<tr><td>05 Jun</td><td>11:00</td><td>16°C (Automatic)</td></tr>
+<tr><td>05 Jun</td><td>15:00</td><td>16°C (Automatic)</td></tr>
+
+<tr class="alert">
+<td>05 Jun</td>
+<td>18:00</td>
+<td>27°C (MANUALLY MODIFIED)</td>
+</tr>
+
+<tr><td>06 Jun</td><td>00:00</td><td>Room Temperature OFF</td></tr>
+
+<tr><td>06 Jun</td><td>06:00</td><td>Room Temperature ON</td></tr>
+
+<tr class="alert">
+<td>06 Jun</td>
+<td>06:00</td>
+<td>24°C (SET TO AUTOMATIC)</td>
+</tr>
+
+<tr><td>06 Jun</td><td>11:00</td><td>22°C (Automatic)</td></tr>
+<tr><td>06 Jun</td><td>15:00</td><td>25°C (Automatic)</td></tr>
+<tr><td>06 Jun</td><td>18:00</td><td>27°C (Automatic)</td></tr>
+<tr><td>07 Jun</td><td>00:00</td><td>Room Temperature OFF</td></tr>
+
+</table>
+
+<br>
+
+<div class="alert">
+SYSTEM ALERT
+</div>
+
+<p>
+Temperature profile deviated from standard automation pattern.
+</p>
+
+<p>
+Manual modifications detected:
+<br>- 03 Jun 23:15
+<br>- 05 Jun 18:00
+<br>- 06 Jun 06:00
+</p>
+
+<p class="alert">
+Environmental settings were changed manually.
+Review access logs for authorized personnel.
+</p>
+
+`;
+
+}else{
+
+document.getElementById("result").innerHTML = `
+<p style="color:#ff5555;">
+ACCESS DENIED<br>
+FILE NOT FOUND
+</p>
+`;
+
+}
+
+}
+</script>
+
+</body>
+</html>
